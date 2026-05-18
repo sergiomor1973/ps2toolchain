@@ -16,4 +16,4 @@ export PATH=$PATH:$PS2DEV/dvp/bin
 export PATH=$PATH:$PS2SDK/bin
 
 ## Run the toolchain script.
-./toolchain.sh "$@" || { echo "ERROR: Could not run the toolchain script."; exit 1; }
+bash ./toolchain.sh "$@" || { echo "ERROR: Could not run the toolchain script."; exit 1; }
