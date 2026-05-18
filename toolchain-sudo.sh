@@ -1,6 +1,8 @@
 #!/bin/bash
 # toolchain-sudo.sh by Naomi Peori (naomi@peori.ca)
 
+set -e
+
 ## Enter the ps2toolchain directory.
 cd "$(dirname "$0")" || { echo "ERROR: Could not enter the ps2toolchain directory."; exit 1; }
 
@@ -10,7 +12,7 @@ export PS2SDK=$PS2DEV/ps2sdk
 export PATH=$PATH:$PS2DEV/bin
 export PATH=$PATH:$PS2DEV/ee/bin
 export PATH=$PATH:$PS2DEV/iop/bin
-# export PATH=$PATH:$PS2DEV/dvp/bin
+export PATH=$PATH:$PS2DEV/dvp/bin
 export PATH=$PATH:$PS2SDK/bin
 
 ## Run the toolchain script.
